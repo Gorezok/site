@@ -1,0 +1,322 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+
+
+
+
+.wrapper {}
+.form {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 30px 0px 0px;
+}
+
+
+
+
+
+
+
+
+.form *{
+  outline: none; /****************************************/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form_body {
+  position: relative;
+}
+.form_body:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9) url("lcat.gif") center / 150px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+.form_body._sending:after{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
+.form_title {
+  font-size: 16px;
+  margin: 0px 0px 20px;
+  text-align: center;
+}
+.form_item {
+  margin: 0px 0px 15px;
+}
+
+
+
+
+.form_label {
+  display: block;
+  /*font-size: 20px;*/
+  margin: 0px 0px 6px;
+}
+
+
+
+
+
+.form_input {
+  height: 35px;
+  width: 95%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+.form_input._error{
+  background-color: #ffe5e5;
+}
+textarea.form_input{
+  min-height: 120px;
+  resize: none; /**/
+  padding: 5px 10px;
+}
+
+
+
+
+
+.options {}
+.options_item {
+  padding: 0px 0px 10px;
+}
+
+
+
+
+
+/*Гтово*/
+
+
+.options_input {
+  display: none; /**/
+}
+.options_input:checked + .options_label:after{
+  transform: scale(1);
+}
+.options_label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.options_label:before, .options_label:after{
+  cursor: pointer;
+}
+.options_label:before{
+  content: "";
+  flex: 0 0 24px; /**/
+  height: 24px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  align-self: flex-start;
+  margin: 0px 7px 0px 0px;
+}
+.options_label:after{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ffd3d3;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+}
+
+
+/**/
+
+
+
+
+
+
+
+
+.for_label {}
+.select {}
+.file {
+  max-width: 26%; /*!!!!!!!!*/
+}
+.file_item {
+  position: relative;
+}
+.file_input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0; /*Для того, чтобы курсор не пропадал*/
+  cursor: pointer;
+}
+.file_button {
+  display: inline-flex;
+  min-height: 28px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdffbd;
+  padding: 0px 20px;
+  transition: box-shadow 0.6s ease 0s;
+}
+.file_item:hover .file_button{ /*Продвинутая анимация*/
+  box-shadow: inset 100px 0px #aee9ae;
+}
+.file_preview {
+  display: inline-block;
+  max-width: 100px;
+  padding: 10px 0px 0px 0px;
+}
+.file_preview img{
+  max-width: 100%;
+}
+
+
+
+
+
+
+.checkbox {}
+.checkbox._error {
+  
+}
+
+
+/*Гтово*/
+
+
+.checkbox_input {
+  display: none; /**/
+}
+.checkbox_input:checked + .checkbox_label:after{
+  transform: scale(1);
+}
+.checkbox_label {
+  position: relative;
+  display: inline-flex;
+  align-items: center; 
+}
+.checkbox_label:before, .checkbox_label:after{
+  cursor: pointer;
+}
+.checkbox_label:before {
+  content: "";
+  flex: 0 0 24px; /**/
+  height: 24px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin: 0px 10px 0px 0px;
+}
+.checkbox_label:after{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: #ffd3d3;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+}
+.checkbox_label a{
+  color: #ff2626;
+}
+
+/**/
+
+
+
+.form_button {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  border: none;
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #bdffbd;
+  margin: 0px 0px 13px 0px;
+  transition: box-shadow 0.6s ease 0s;
+}
+.form_button:hover{
+  box-shadow: inset 400px 0px #aee9ae;
+}
+
+
+
